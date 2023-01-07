@@ -33,7 +33,7 @@ source ./create-venv.sh <python-version> [<requirements-file>]
 If a virtual environment in a `venv` folder already exists, this command
 will delete it and replace it with the new environment.
 
-This command assumes that you have pyenv already installed in your computer.
+It's assumed that you have pyenv already installed in your computer.
 
 For example:
 
@@ -43,3 +43,10 @@ source ./create-venv.sh 3.10.4
 
 Requirements files are optional, and you can list as many requirements files
 as you want.
+
+After running the previous command, the environment will be activated. For
+deactivating it, run:
+
+```{bash}
+deactivate
+```
