@@ -8,7 +8,7 @@ For installing [pyenv](https://github.com/pyenv/pyenv), run the following
 command:
 
 ```{bash}
-source ./install-pyenv.sh
+./install-pyenv.sh
 ```
 
 This command will check if pyenv's code is already downloaded in your $HOME
