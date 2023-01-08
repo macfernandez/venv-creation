@@ -12,13 +12,11 @@ command:
 ```
 
 This command will check if pyenv's code is already downloaded in your $HOME
-directory.
+directory, and if the [configuration](./config.txt) was added in .bashrc and
+.profile (if exists) files.
 
-- If it's already downloaded, the program asusmes you have already
-installed pyenv, and made the proper modifications for its paths.
-
-- If pyenv's code is not downloaded, it will be. Then, all necesary modifications
-will be made in .bashrc (and .profile, if exists) for enabling pyenv's usage.
+If the code was not downloaded, the program will download it.
+And if the configuration was not set, it will be.
 
 ## Venv
 
