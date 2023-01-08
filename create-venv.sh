@@ -5,11 +5,13 @@ PYTHON_VERSION="${ARGS[0]}"
 REQUIREMENTS=(${ARGS[@]:1})
 
 function create_n_activate_venv() {
+    # create venv and activate it
     python -m venv venv
     source venv/bin/activate
 }
 
 function delete_old_venv() {
+    # delete older venv if it exists
     local VENV="venv"
     if [ -d "$VENV" ]; then
         rm -r $VENV
@@ -18,10 +20,12 @@ fi
 }
 
 function install_python_version() {
-    pyenv install -s $1
+    # install python version in pyenv
+    pyenv install -s $PYTHON_VERSION
 }
 
 function install_requirements() {
+    # install requirements (specified with files)
     local REQS=($@)
     pip install --upgrade pip
     for REQ in ${REQS[@]}
@@ -34,10 +38,11 @@ function install_requirements() {
 }
 
 function select_python() {
-    pyenv local $1
+    # select python version
+    pyenv local $PYTHON_VERSION
 }
 
-install_python_version $PYTHON_VERSION
-select_python $1
+install_python_version
+select_python
 create_n_activate_venv
 install_requirements ${REQUIREMENTS[@]}
