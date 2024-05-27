@@ -65,6 +65,8 @@ function check_installation() {
 function clone_pyenv_code() {
     # clone pyenv's code
     git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+    git clone https://github.com/yyuu/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+
 }
 
 function install_dependencies() {
