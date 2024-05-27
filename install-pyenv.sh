@@ -70,9 +70,12 @@ function clone_pyenv_code() {
 function install_dependencies() {
     # install required dependencies
     sudo apt install curl git-core gcc make zlib1g-dev \
-	libbz2-dev libreadline-dev libsqlite3-dev libssl-dev
+	libbz2-dev libreadline-dev libsqlite3-dev libssl-dev \
+    python3-tk python3-venv
 
-    sudo apt-get install libffi-dev
+    sudo apt-get install libffi-dev lzma liblzma-dev \
+    libbz2-dev
+
 }
 
 check_if_installed
